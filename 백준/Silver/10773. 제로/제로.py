@@ -1,14 +1,13 @@
-K = int(input())
+import sys
 
-mList = list()
+stack = []
+K = int(sys.stdin.readline().rstrip())
 
 for i in range(K):
-    n = int(input())
-
-    if n == 0:
-        if len(mList) != 0:
-            mList.pop()
+    num = int(sys.stdin.readline().rstrip())
+    if num == 0 and len(stack) != 0:
+        stack.pop()
     else:
-        mList.append(n)
+        stack.append(num)
 
-print(sum(mList))
+print(sum(stack))
