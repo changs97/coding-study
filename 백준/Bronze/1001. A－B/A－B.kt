@@ -1,6 +1,5 @@
 fun main() {
-    readlnOrNull()?.split(" ")?.map { it.toInt() }?.also { numList ->
-        val result = numList[0] - numList[1]
-        print(result)
-    }
+    val numList = readln().split(" ").map { it.toInt() }
+    val result = numList[0] - numList[1]
+    print(result)
 }
