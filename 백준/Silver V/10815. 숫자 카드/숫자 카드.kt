@@ -2,7 +2,7 @@
 fun main() {
     val bw = System.out.bufferedWriter()
     val n = readln().toInt()
-    val myNumCards = readln().split(" ").map { it.toInt() }.toHashSet()
+    val myNumCards = readln().split(" ").map { it.toInt() }.toMutableSet()
 
     val m = readln().toInt()
     val numCards = readln().split(" ").map { it.toInt() }
