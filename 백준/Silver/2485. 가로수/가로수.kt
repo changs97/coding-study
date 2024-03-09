@@ -1,0 +1,16 @@
+
+/**
+ * @param a: b보다 큰 자연수
+ * @param b: b보다 작은 자연수
+ * */
+private fun gcd(a: Int, b: Int): Int = if (b != 0) gcd(b, a % b) else a
+
+fun main() = with(System.`in`.bufferedReader()) {
+    val n = readLine().toInt()
+    val colonnade = IntArray(n) { readLine().toInt() }
+    val distance = IntArray(n - 1) { colonnade[it + 1] - colonnade[it] }
+    val gcd = distance.reduce { acc, i -> gcd(acc, i) }
+    var result = 0
+    for (d in distance) result += d / gcd - 1
+    println(result)
+}
