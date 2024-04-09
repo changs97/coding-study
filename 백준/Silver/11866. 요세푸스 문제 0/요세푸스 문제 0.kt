@@ -1,7 +1,7 @@
 import java.util.*
 
 fun main() {
-    val (n, k) = readLine()!!.split(" ").map { it.toInt() }
+    val (n, k) = readln().split(" ").map { it.toInt() }
     val queue: Queue<Int> = LinkedList()
 
     for (i in 1..n) {
@@ -9,7 +9,6 @@ fun main() {
     }
 
     val result = mutableListOf<Int>()
-    var currentIndex = 0
 
     while (queue.isNotEmpty()) {
         for (i in 1 until k) {
